@@ -3,13 +3,13 @@
     // Module Resolution
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "target": "es2022",
-    "lib": ["es2022"],
+    "target": "ES2022",
+    "lib": ["ES2022"],
     "moduleDetection": "force",
 
     // Output Configuration
-    "outDir": "dist",
-    "rootDir": ".",
+    "outDir": "./dist",
+    "rootDir": "./src",
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
@@ -19,9 +19,8 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
-    "allowJs": true,
+    "allowJs": false,
     "isolatedModules": true,
-    "verbatimModuleSyntax": true,
 
     // Type Checking - Strict Mode
     "strict": true,
@@ -31,18 +30,16 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
-    "noPropertyAccessFromIndexSignature": true,
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
 
     // Best Practices
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "exactOptionalPropertyTypes": true,
 
     // Emit
     "noEmitOnError": true
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"]
 }

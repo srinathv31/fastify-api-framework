@@ -1,8 +1,15 @@
 import fastify from "fastify";
+import statusRoute from "./routes/status.js";
+import startRoute from "./routes/start.js";
+import callbacksRoute from "./routes/process-complete.js";
 
 const server = fastify({
   logger: true,
 });
+
+await server.register(startRoute, { prefix: "/api" });
+await server.register(statusRoute, { prefix: "/api" });
+await server.register(callbacksRoute, { prefix: "/api" });
 
 server.get("/ping", async () => {
   return "pong\n";
